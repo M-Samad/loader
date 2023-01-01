@@ -1,0 +1,73 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 15vw;
+  height: 15vw;
+  /* background-color: antiquewhite; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.extra {
+  display: flex;
+  width: 30%;
+  height: 39%;
+}
+.image3 {
+  /* background: url("./Assets/hand.svg");
+  height: 5vw;
+  width: 15vw; */
+  width: 65%;
+  animation-name: infinitedown;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  transition: all 0.5s;
+}
+.image2 {
+  width: 30%;
+  margin-left: -3vw;
+  animation-name: infiniteupdown;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  transition: all 0.5s;
+}
+@keyframes infiniteupdown {
+  0% {
+    transform: translateY(-1.5vw);
+  }
+  /* 50% {
+    transform: translateY(10px);
+  } */
+  100% {
+    transform: translateY(1.3vw);
+  }
+}
+
+.gif {
+  width: 150%;
+  display: none;
+}
+@keyframes infinitedown {
+  0% {
+    transform: translateX(1.5vw);
+  }
+  /* 50% {
+    transform: translateY(10px);
+  } */
+  100% {
+    transform: translateX(-0.2vw);
+  }
+}
+
+.gif {
+  margin-top: 2vw;
+  width: 150%;
+  display: none;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="loader">
+      <img class="gif" src="./Assets/577126a354b2e-unscreen.gif" alt="" />
+      <div class="extra"></div>
+      <img class="image2" src="./Assets/money.png" alt="" />
+      <img class="image3" src="./Assets/hand.svg" alt="" />
+    </div>
+    <script>
+      const handImg = document.querySelector(".image3");
+      const moneyImg = document.querySelector(".image2");
+      const gif = document.querySelector(".gif");
+      const extra = document.querySelector(".extra");
+
+      console.log("pre");
+      setInterval(() => {
+        console.log("set");
+        if (
+          handImg.style.display === "none" &&
+          moneyImg.style.display === "none"
+        ) {
+          console.log("fdfd");
+          gif.style.display = "none";
+          handImg.style.display = "flex";
+          extra.style.display = "flex";
+
+          setTimeout(() => {
+            moneyImg.style.display = "flex";
+            extra.style.display = "none";
+          }, 500);
+        } else {
+          gif.style.display = "flex";
+          console.log("else");
+          handImg.style.display = "none";
+          moneyImg.style.display = "none";
+        }
+      }, 2500);
+    </script>
+  </body>
+</html>
